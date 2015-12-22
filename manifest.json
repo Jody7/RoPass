@@ -1,0 +1,26 @@
+{
+
+
+"content_scripts": [
+    {
+      "matches": ["*://www.roblox.com/*"],
+      "js": ["jQuery.js"]
+    }
+  ],
+
+ "background": {
+    "scripts": ["listen.js"]
+  },
+	"browser_action": {
+      "default_icon": "lock.png",
+      "default_title": "Generate or Login"
+   },
+
+   "description": "Auto Generates Secure Passwords",
+   "manifest_version": 2,	
+   "name": "Ro-Password",
+   "permissions": [ "storage", "*://*.roblox.com/*" ],
+   "short_name": "RoPass",
+   "version": "1",
+   "web_accessible_resources": [ "*.html", "*.js", "jquery.min.map", "*://*.roblox.com/*"]
+}
